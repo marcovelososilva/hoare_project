@@ -17,15 +17,20 @@ def wprec(c,q):
     # we have, and then write the corresponding code.
     match c:
         case Skip():
-            # Fill the code here
+            # Fill the code here, and delete "pass"
+            pass
         case Assgn():
-            # Fill the code here
+            # Fill the code here, and delete "pass"
+            pass
         case Seq():
-            # Fill the code here
+            # Fill the code here, and delete "pass"
+            pass
         case IfThen():
-            # Fill the code here
+            # Fill the code here, and delete "pass"
+            pass
         case While():
-            # Fill the code here
+            # Fill the code here, and delete "pass"
+            pass
         case _:
             # This is the case that will not be reached, but is here
             # for completeness.

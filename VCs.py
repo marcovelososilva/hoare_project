@@ -1,4 +1,4 @@
-from pyparsing import empty
+# from pyparsing import empty
 from Exprs import *
 from Imp   import *
 from Specs import *
@@ -17,15 +17,20 @@ def VC(pre,c,post):
     # defined in the mathematical definition of the VC function
     match c:
         case Skip():
-            # Enter your code here
+            # Enter your code here, and delete "pass"
+            pass
         case Assgn():
-            # Enter your code here
+            # Enter your code here, and delete "pass"
+            pass
         case Seq():
-            # Enter your code here
+            # Enter your code here, and delete "pass"
+            pass
         case IfThen():
-            # Enter your code here
+            # Enter your code here, and delete "pass"
+            pass
         case While():
-            # Enter your code here
+            # Enter your code here, and delete "pass"
+            pass
         case _:
             raise VC_Exception
 

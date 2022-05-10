@@ -65,7 +65,7 @@ class TestWPrec(unittest.TestCase):
         self.assertEqual(wprec(p8_comm,p8_post),p8_answ)
 
     # 9.
-    def test_wprec_(self):
+    def test_wprec_9(self):
         p9_comm = IfThen(BELt(AEVar('i'),AEVar('j')),Assgn('min',AEVar('i')),Assgn('min',AEVar('j')))
         p9_post = SAnd(SLeq(AEVar('min'),AEVar('i')),SLeq(AEVar('min'),AEVar('i')))
         p9_answl = SImp(
