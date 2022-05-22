@@ -78,12 +78,12 @@ class IfThen(Command):
 
     def right(self):
         return self.__cf
-    
+
     def __eq__(self,other):
         match other:
             case IfThen():
                 return ((self.__cond == other.cond()) and
-                        (self.__ct == other.left()) and 
+                        (self.__ct == other.left()) and
                         (self.__cf == other.right()))
             case _:
                 return False
@@ -91,9 +91,9 @@ class IfThen(Command):
     def __str__(self):
         b  = Fore.GREEN + "If" + "(" + str(self.__cond) + ") "
         ls = Fore.GREEN + "then" + " { " + str(self.__ct) + " }"
-        rs = Fore.GREEN + "else" + " { " + str(self.__ct) + " }"
-        return  (b + ls + rs)  
-    
+        rs = Fore.GREEN + "else" + " { " + str(self.__cf) + " }"
+        return  (b + ls + rs)
+
 class While(Command):
 
     def __init__(self,b,i,c):
@@ -113,7 +113,7 @@ class While(Command):
     def __eq__(self,other):
         match other:
             case Seq():
-                return ((self.__cond == other.cond()) and 
+                return ((self.__cond == other.cond()) and
                         (self.__inv == other.inv()) and
                         (self.__body == other.body())
                         )
